@@ -1,0 +1,13 @@
+theme: jekyll-theme-slate
+title: Sirius' blog
+description: 黄沙百战穿金甲，不破楼兰誓不还
+author: sirius
+jekyll-archives:
+  enabled:
+    -categories
+    -tags
+defaults:
+  - scope:
+      path: "*.jpg"
+    values:
+      image: true
