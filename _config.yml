@@ -1,13 +1,14 @@
 theme: jekyll-theme-slate
 title: Sirius' blog
+url: https://sirius.github.io/bing-wallpaper-collect
 description: 黄沙百战穿金甲，不破楼兰誓不还
 author: sirius
 jekyll-archives:
   enabled:
-    -categories
-    -tags
+    - categories
+    - tags
 defaults:
   - scope:
-      path: "*.jpg"
+      path: "assets"
     values:
       image: true
