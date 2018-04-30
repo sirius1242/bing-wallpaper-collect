@@ -1,3 +1,6 @@
+---
+layout: content
+---
 ## This is a repository of collected Bing Wallpaper
 
 <ul style="list-style: none;">
