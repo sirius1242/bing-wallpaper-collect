@@ -15,6 +15,7 @@ ul.horizontal {
 	/*border-color: #008888;
 		border-radius: 10px 10px 10px 10px;*/
 }
+
 .fixed {
 	top: 0px;
 	position: fixed;
@@ -28,7 +29,18 @@ ul.horizontal li {
 #logo {
 	float: left;
 	border: none;
+	height: 50px;
 	vertical-align: middle;
+}
+
+#picture {
+	-webkit-transition: -webkit-transform 1.6s ease-in-out;
+			transition: 		transform 1.6s ease-in-out;
+}
+
+#picture:hover {
+	-webkit-transform: rotate(720deg);
+			transform: rotate(720deg);
 }
 
 ul.horizontal li a {
@@ -83,7 +95,7 @@ ul.horizontal li a.active {
 		--><li id="files"><a href='{{ site.mainurl }}/files.html'>Files</a></li><!--
 		--><li><a href='{{ site.mainurl }}/category'>Category</a></li><!--
 		--><li><a href='{{ site.mainurl }}/'>Home</a></li><!--
-		--><li id="logo"><object data='{{ site.mainurl }}/assets/favicon.png' type="image/png" width=40px ></object></li>
+		--><li id="logo"><object id="picture" data='https://sirius1242.github.io/assets/favicon.png' type="image/png" width=40px ></object></li>
 		<!--li id="logo" style="padding: 15px 10px">Sirius' Blog</li-->
 	</ul>
 </div>
