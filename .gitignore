@@ -2,3 +2,4 @@ others/
 *.png
 Gemfile*
 _site
+monitor.log
