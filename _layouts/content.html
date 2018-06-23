@@ -54,7 +54,7 @@ ul.horizontal li a {
 ul.horizontal li a:hover:not(.active) {
 	/*background-color: #606060;*/
 	font-weight: bold;
-	padding: 16px 20px;
+	padding: 15px 20px;
 	box-shadow: 0px 2px 0px #0366d6;
 }
 
@@ -65,9 +65,10 @@ ul.horizontal li a.active {
 #roll-fix { 
 	margin-top: -60px;
 	z-index: 35;
+	position: relative;
 }
 
-@media(max-width: 600px){
+@media(max-width: 650px){
 	#wallpapers{
 		display: none;
 	}
@@ -85,16 +86,11 @@ ul.horizontal li a.active {
 </style>
 <div id="roll-fix" class="outer">
 	<ul class="horizontal">
-		<!--li style="float: left; padding: 50px 0px; text-align: center;"><a href='{{ "/index.html" | absolute_url }}'><span style="font-size: 50px;">&#127968;</span></br> home</a></li>
-		<li style="float: right; padding: 50px 0px; text-align: center;"><a href='{{ "/category/index.html" | absolute_url }}'><span style="font-size: 50px;">&#128188;</span></br> category</a></li>
-
-		<li style="padding: 50px;"></li>
-		<li style="padding: 50px;"></li-->
 		<li id="wallpapers"><a href='{{ site.mainurl }}/bing-wallpaper-collect'>Wallpapers</a></li><!--
 		--><li id="scripts"><a href='{{ site.mainurl }}/script'>Scripts</a></li><!--
 		--><li id="files"><a href='{{ site.mainurl }}/files.html'>Files</a></li><!--
 		--><li><a href='{{ site.mainurl }}/category'>Category</a></li><!--
-		--><li><a href='{{ site.mainurl }}/'>Home</a></li><!--
+		--><li><a href='{{ site.mainurl }}/blog.html'>Blog</a></li><!--
 		--><li id="logo"><object id="picture" data='https://sirius1242.github.io/assets/favicon.png' type="image/png" width=40px ></object></li>
 		<!--li id="logo" style="padding: 15px 10px">Sirius' Blog</li-->
 	</ul>
