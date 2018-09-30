@@ -8,7 +8,7 @@ layout: content
 		{% for image in images %}
 			{% unless image.name contains '.png' %}
 			<li>
-			<a href="assets/{{ image.name }}"><img src="assets/{{ image.name }}"><br/>{{ image.name }}</a>
+			<a href="assets/{{ image.name }}"><img src="http://home.ustc.edu.cn/~lwr1242/bw-thumbnails/{{ image.name }}"><br/>{{ image.name }}</a>
 			</li>
 			{% endunless %}
 		{% endfor %}
