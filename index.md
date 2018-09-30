@@ -5,11 +5,9 @@ layout: content
 
 <ul style="list-style: none;">
 		{% assign images = site.static_files | where: "image", true %}
-		{% for image in images %}
+		{% tablerow image in images cols:2 %}
 			{% unless image.name contains '.png' %}
-			<li>
-			<a href="assets/{{ image.name }}"><img src="http://home.ustc.edu.cn/~lwr1242/bw-thumbnails/{{ image.name }}"><br/>{{ image.name }}</a>
-			</li>
+			<a href="assets/{{ image.name }}"><img src="http://home.ustc.edu.cn/~lwr1242/bw-thumbnails/{{ image.name }}"></a>
 			{% endunless %}
-		{% endfor %}
+		{% endtablerow %}
 </ul>
