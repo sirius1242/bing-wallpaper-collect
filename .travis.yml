@@ -1,5 +1,8 @@
-deploy:
-    provider: script
-    script: bash curl-travis.sh
-    on:
-        branch: master
+branches:
+    only:
+    - master
+script: 
+    - ./curl-travis.sh
+after_success:
+    - git commit -m `date -I`
+    - git push "https://${GH_TOKEN}@origin" master > /dev/null 2>&1
