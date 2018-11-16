@@ -1,0 +1,5 @@
+deploy:
+    provider: script
+    script: bash curl-travis.sh
+    on:
+        branch: master
