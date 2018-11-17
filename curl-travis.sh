@@ -1,6 +1,7 @@
 #!/bin/bash
 
 workdir="assets/"
+target="thumbnails/"
 GH_REPO="github.com/sirius1242/bing-wallpaper-collect.git"
 # [[ -z $1 ]] && workdir='/root/git/bing-wallpaper/assets/' || workdir=$1
 site=cn.bing.com
@@ -17,8 +18,8 @@ if [[ -e $workdir$filename ]]; then
 	echo "file exist!" 
     exit 1
 else
-    git fetch origin master
-    git checkout master
 	wget -nv -O $workdir$filename https://$site/$url
 	git add $workdir$filename
+    convert $workdir$filename -resize 10% $target$filename
+    git add $target$filename
 fi
