@@ -18,6 +18,7 @@ if [[ -e $workdir$filename ]]; then
 	echo "file exist!" 
     exit 1
 else
+    git checkout master
 	wget -nv -O $workdir$filename https://$site/$url
 	git add $workdir$filename
     convert $workdir$filename -resize 10% $target$filename
