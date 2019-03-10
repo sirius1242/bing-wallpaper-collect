@@ -11,8 +11,8 @@ if [[ -z $text ]]; then
 	echo "connecting to $site failed!"
     exit 1
 fi
-url=`echo $text | grep img={url | sed -n 's#.*\(/az/[^"]*\).*#\1#;p'`
-filename=`echo $url | awk -F/ '{print $NF}'`
+url=`echo $text | grep img={url | sed -n 's#.*\(/th?id=[^"]*.jpg\).*#\1#;p'`
+filename=`echo $url | sed -n 's#.*th?id=OHR\.\([^"]*\.jpg\)\&.*#\1#;p'`
 echo file:$site$url
 if [[ -e $workdir$filename ]]; then
 	echo "file exist!" 
