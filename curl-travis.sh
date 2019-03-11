@@ -13,7 +13,7 @@ if [[ -z $text ]]; then
 fi
 url=`echo "$text" | grep 'g_img={url' | sed -n 's#.*/\(th?id=[^"]*.jpg\).*rf.*#\1#;p'`
 filename=`echo $url | sed -n 's#.*OHR\.\([^"]*\.jpg\)#\1#;p'`
-echo file:$site$url
+echo file:$site/$url
 if [[ -e $workdir$filename ]]; then
 	echo "file exist!" 
     exit 1
